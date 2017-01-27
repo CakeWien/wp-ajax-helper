@@ -73,8 +73,8 @@ class Frontend {
 			return;
 		}
 
-		$script_url = home_url( '/assets/js/wp-ajax-helper.js' );
-
+		$script_url = get_template_directory_uri() . '/assets/js/wp-ajax-helper.js';
+		
 		wp_enqueue_script( 'wp-ajax-helper', $script_url, array( 'jquery' ), null, true );
 
 		wp_localize_script(
